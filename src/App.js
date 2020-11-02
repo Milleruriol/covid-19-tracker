@@ -7,6 +7,8 @@ import {
 } from '@material-ui/core';
 import './App.css';
 import React, {useState, useEffect} from 'react';
+import InfoBox from "./InfoBox";
+import Map from './Map';
 
 
 function App() {
@@ -48,13 +50,32 @@ const onCountryChange=(event)=>
         </Select>
       </FormControl>
       </div>
-    
-      {/*header*/}
-      {/* */}
-      {/*title+ section input dropdown field */}
-      {/*infobox */}
-      {/*infobox */}
-      {/*infobox */}
+      <div className="app__stats">
+          <InfoBox
+            // onClick={(e) => setCasesType("cases")}
+            title="Coronavirus Cases"
+            isRed
+            // active={casesType === "cases"}
+            // cases={prettyPrintStat(countryInfo.todayCases)}
+            // total={numeral(countryInfo.cases).format("0.0a")}
+          />
+          <InfoBox
+            //onClick={(e) => setCasesType("recovered")}
+            title="Recovered"
+            // active={casesType === "recovered"}
+            // cases={prettyPrintStat(countryInfo.todayRecovered)}
+            // total={numeral(countryInfo.recovered).format("0.0a")}
+          />
+          <InfoBox
+            //onClick={(e) => setCasesType("deaths")}
+            title="Deaths"
+            // isRed
+            // active={casesType === "deaths"}
+            // cases={prettyPrintStat(countryInfo.todayDeaths)}
+            // total={numeral(countryInfo.deaths).format("0.0a")}
+          />
+        </div>
+   
       {/*table */}
       {/*graph */}
       {/*map */}
